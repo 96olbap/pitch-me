@@ -1,0 +1,14 @@
+.error_message {
+    font-size: 400rem;
+    color: #260C1A;
+    animation: header 1s ease-in-out infinite alternate;
+}
+
+@keyframes error_message {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #149911, 0 0 40px #149911, 0 0 50px #149911, 0 0 60px #149911, 0 0 70px #149911;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #1EFC1E, 0 0 40px #1EFC1E, 0 0 50px #1EFC1E, 0 0 60px #1EFC1E, 0 0 70px #1EFC1E, 0 0 80px #1EFC1E;
+    }
+}
