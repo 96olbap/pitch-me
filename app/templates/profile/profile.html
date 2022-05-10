@@ -16,6 +16,7 @@
 
         <!--Displaying user bio-->
         {% if user.bio %}
+        <h5 class='bio-tag'>Bio:</h5>
         <p> {{user.bio}}</p>
         {%else%}
         <p> {{user.username| capitalize}} has no bio </p>
