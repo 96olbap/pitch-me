@@ -2,7 +2,6 @@ body {
     background: #ABCDEF;
     font-family: Assistant, sans-serif;
     min-height: 90vh;
-    display: flex;
 }
 
 .login {
