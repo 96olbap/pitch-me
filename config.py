@@ -5,7 +5,7 @@ class Config:
     '''
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://apple:pass123@localhost/pitch'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    UPLOADED_PGOTOS_DEST = 'app/static/photos'
+    UPLOADED_PHOTOS_DEST = 'app/static/photos'
     SECRET_KEY = os.urandom(32)
     SECRET_KEY = ['SECRET_KEY']
 
