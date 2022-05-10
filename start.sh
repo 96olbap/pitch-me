@@ -1,4 +1,4 @@
-export SECRET_KEY = '12345'
+export SECRET_KEY = 12345
 
 
 
