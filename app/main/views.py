@@ -1,19 +1,28 @@
 from flask import render_template,redirect,request,url_for,abort
-from ..models import User
+from ..models import User,Pitch
 from . import main
-from .forms import UpdateProfile
+from .forms import UpdateProfile, UploadPitch
 from .. import db,photos
 from flask_login import login_required,current_user
 
 
 # Views
-@main.route('/')
+@main.route('/', methods = ['GET','POST'])
 def index():
     '''
     View root page function that returns the index page and its data
     '''
+    form = UploadPitch()
 
-    return render_template('index.html')
+    pitches = Pitch.query.all()
+
+    if form.validate_on_submit():
+        pitch = Pitch(message = form.message.data, user_id = current_user.id)
+        db.session.add(pitch)
+        db.session.commit()
+
+
+    return render_template('index.html', form=form, pitches=pitches)
 
 @main.route('/user/<uname>')
 def profile(uname):

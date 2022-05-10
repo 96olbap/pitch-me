@@ -1,3 +1,4 @@
+from datetime import datetime
 from . import db
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin
@@ -22,6 +23,7 @@ class User(UserMixin,db.Model):
     profile_pic_path = db.Column(db.String())
     pass_secure = db.Column(db.String(255))
     role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))
+    pitch = db.relationship('Pitch', backref = 'pitch', lazy = 'dynamic')
 
     @property
     def password(self):
@@ -48,3 +50,15 @@ class Role(db.Model):
 
     def __repr__(self):
         return f'User {self.name}'
+
+class Pitch(db.Model):
+    '''
+    Pitch class that will generate new instances of pitch objects
+    '''
+    __tablename__ = 'pitch'
+    id = db.Column(db.Integer,primary_key = True)
+    message = db.Column(db.String(255), nullable = False)
+    like = db.Column(db.Integer)
+    dislike = db.Column(db.Integer)
+    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
