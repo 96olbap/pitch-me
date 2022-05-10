@@ -1,4 +1,4 @@
-from flask import render_template,redirect,request,urll_for,abort
+from flask import render_template,redirect,request,url_for,abort
 from ..models import User
 from . import main
 
