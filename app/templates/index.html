@@ -23,10 +23,16 @@
                 </li>
                 {% endfor %}
             </ul>
+            {% if current_user.is_authenticated %}
+            <center>
+                <hr>
+            </center>
+            {% else %}
             <p class="publish"> Post a pitch? <a href="{{url_for('auth.login')}}">Login</a></p>
+            {% endif %}
         </div>
     </section>
-    {% if current_user.is_authenticated %}
+    <br> {% if current_user.is_authenticated %}
     <section class='login' id='login'>
         <div class='head'>
             <h3 id="greeting"> pitch-me </h3>
