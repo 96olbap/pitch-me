@@ -14,4 +14,4 @@ class UploadPitch(FlaskForm):
     
     '''
     message = TextAreaField('Write your pitch', validators= [InputRequired()])
-    submit = SubmitField('Publish')
+    submit = SubmitField('Post')
