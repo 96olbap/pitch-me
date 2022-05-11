@@ -1,24 +1,29 @@
 {% extends 'base.html'%} {% import 'bootstrap/wtf.html' as wtf%} {% block styles %} {{ super() }}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"> {% endblock %} {% block content %}
 <div class="container container-fluid">
-    <section>
+    <section class="login" id="pitches">
+        <div class='head'>
+            <h1 class='company'> ~ Explore ~ </h1>
+        </div>
         <div>
             <ul>
                 {% for pitch in pitches %}
                 <li>
                     <div class="quote">
-                        <p>
+                        <p id="pitch-msg">
                             {{ pitch.message }}
                         </p>
+                        <br>
                         <div>
-                            <p>
-                                {{pitch.date_posted}}
+                            <p id="post-at">
+                                Posted at: {{pitch.date_posted}}
                             </p>
                         </div>
                     </div>
                 </li>
                 {% endfor %}
             </ul>
+            <p class="publish"> Post a pitch? <a href="{{url_for('auth.login')}}">Login</a></p>
         </div>
     </section>
     {% if current_user.is_authenticated %}
