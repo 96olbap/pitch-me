@@ -30,9 +30,19 @@ body {
     padding: 50px;
 }
 
-.pitches {
-    max-height: 80vh;
+section#pitches.login {
+    max-height: 90vh;
 }
+
+
+/* .pitches-inn ul li {
+    max-height: 45vh;
+} */
+
+
+/* .pitches {
+    max-height: 30vh;
+} */
 
 .login .head {
     display: flex;
@@ -147,6 +157,7 @@ section {
     border-radius: 8px;
     padding: 50px;
     margin: 15px;
+    max-height: 20vh;
 }
 
 #pitch-msg {
