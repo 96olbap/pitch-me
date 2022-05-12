@@ -14,7 +14,7 @@ login_manager.login_view = 'auth.login'
 photos = UploadSet('photos', IMAGES)
 
 
-# mail = Mail()
+mail = Mail()
 
 # Create app
 def create_app(config_name):
@@ -22,12 +22,13 @@ def create_app(config_name):
     
     # Creating app configurations
     app.config.from_object(config_options[config_name])
+    app.config.from_object(['MAIL_PASSWORD'])
 
     # Initializing flask extensions
     bootstrap.init_app(app)
     db.init_app(app)
     login_manager.init_app(app)
-    # mail.init_app(app)
+    mail.init_app(app)
 
 
     # Configure UploadSet
