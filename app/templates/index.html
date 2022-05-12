@@ -14,17 +14,15 @@
                             {{ pitch.message }}
                         </p>
                         <br>
-                        <div>
+                        <div id="panga">
                             <p id="pitch-author">
                                 Author: {{pitch.author}}
                             </p>
-                            <center>
-                                <p>
-                                    Category: {{pitch.category}}
-                                </p>
-                            </center>
+                            <p id="pitch-category">
+                                Category: {{pitch.category}}
+                            </p>
                             <p id="post-at">
-                                Posted at: {{pitch.date_posted}}
+                                Posted at: {{pitch.date_posted.strftime('%d-%m-%Y')}}
                             </p>
                         </div>
                     </div>

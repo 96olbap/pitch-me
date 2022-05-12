@@ -15,5 +15,5 @@ class UploadPitch(FlaskForm):
     '''
     message = TextAreaField('Write your pitch', validators= [InputRequired()])
     author = TextAreaField('Name of author', validators = [InputRequired()])
-    category = SelectField('Category', choices=(['Food', 'Sports', 'Travel', 'Art', 'Music', 'Film', 'Lifestyle', 'Other']), validators = [InputRequired()])
+    category = SelectField('Category', choices=(['', 'Food', 'Sports', 'Travel', 'Art', 'Music', 'Film', 'Lifestyle', 'Other']), validators = [InputRequired()])
     submit = SubmitField('Post')

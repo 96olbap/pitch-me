@@ -157,10 +157,38 @@ section {
 
 #post-at {
     font-size: 1.25rem;
+    margin: 4px;
     margin-top: 5px;
     margin-bottom: 0;
-    text-align: right;
+    align-self: flex-end;
+    /* text-align: right; */
     color: rgb(210, 203, 203);
+}
+
+#pitch-author {
+    font-size: 1.25rem;
+    margin: 4px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    align-self: flex-start;
+    /* text-align: left; */
+    color: rgb(210, 203, 203);
+}
+
+#pitch-category {
+    font-size: 1.25rem;
+    margin: 4px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    align-self: center;
+    /* text-align: center; */
+    color: rgb(210, 203, 203);
+}
+
+#panga {
+    display: flex;
+    padding: 3px;
+    justify-content: space-evenly;
 }
 
 .publish {
