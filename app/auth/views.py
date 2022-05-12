@@ -4,7 +4,7 @@ from . import auth
 from ..models import User
 from .forms import LoginForm,RegistrationForm
 from .. import db
-from ..email import mail_message
+# from ..email import mail_message
 
 @auth.route('/login',methods = ['GET','POST'])
 def login():
@@ -44,7 +44,7 @@ def register():
         db.session.add(user)
         db.session.commit()
 
-        mail_message('Welcome to pitch-me, where you can view pitches from other users and even make and post your own','email/welcome_user',user.email,user=user)
+        # mail_message('Welcome to pitch-me','email/welcome_user',user.email, user=user)
 
         return redirect(url_for('auth.login'))
         title = 'New Account'

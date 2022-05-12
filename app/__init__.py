@@ -13,8 +13,8 @@ login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
 photos = UploadSet('photos', IMAGES)
 
-# Initializing mail extension
-mail = Mail()
+
+# mail = Mail()
 
 # Create app
 def create_app(config_name):
@@ -27,7 +27,7 @@ def create_app(config_name):
     bootstrap.init_app(app)
     db.init_app(app)
     login_manager.init_app(app)
-    mail.init_app(app)
+    # mail.init_app(app)
 
 
     # Configure UploadSet

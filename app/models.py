@@ -1,4 +1,7 @@
 from datetime import datetime
+from unicodedata import category
+
+from click import option
 from . import db
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin
@@ -60,5 +63,7 @@ class Pitch(db.Model):
     message = db.Column(db.String(255), nullable = False)
     like = db.Column(db.Integer)
     dislike = db.Column(db.Integer)
+    author = db.Column(db.String(80), nullable = False)
+    category = db.Column(db.String(), nullable = False)
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))

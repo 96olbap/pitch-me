@@ -1,3 +1,7 @@
 Hello {{user.username}}
+Hi there!
+
 Welcome to pitch-me
-We have just seen you have signed up for our application and want to welcome you to the family. Please enjoy the reviews of all your  favourite films.
+We're so glad you're here. You are now part of a growing community of creatives collaborating, and connecting across the globe via browsing/posting to our collection of pitches.
+Whether you’ve joined to post a pitch of your own or just to explore pitches by other users, we’ve got something for you.
+Let’s go!

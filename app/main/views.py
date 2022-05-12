@@ -17,7 +17,7 @@ def index():
     pitches = Pitch.query.all()
 
     if form.validate_on_submit():
-        pitch = Pitch(message = form.message.data, user_id = current_user.id)
+        pitch = Pitch(message = form.message.data,author = form.author.data, category = form.category.data, user_id = current_user.id)
         db.session.add(pitch)
         db.session.commit()
 
